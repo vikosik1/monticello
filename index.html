@@ -9,40 +9,284 @@
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>LAYOUT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+    <link rel="stylesheet" href="styles/app.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <title>Monticello</title>
 </head>
-<h1>GOL</h1>
 
 <body>
-    <header class="ba-header">
-        <div class="container">
-            <a href="" class="ba-logo"></a>
-            <nav>
-                <ul class="ba-menu">
-                    <li class="ba-menu__item"><a href="" class="ba-menu__link">item1</a></li>
-                    <li class="ba-menu__item"><a href="" class="ba-menu__link">item2</a></li>
-                    <li class="ba-menu__item"><a href="" class="ba-menu__link">item3</a></li>
-                    <li class="ba-menu__item"><a href="" class="ba-menu__link">item4</a></li>
-                </ul>
-            </nav>
+    <header>
+        <div class="container ba-header">
+            <a href="" class="ba-logo" title="logo"><img src="src/logo.png" alt="Logo"></a>
+            <div class="ba-header-wrapper">
+                <nav>
+                    <ul class="ba-menu">
+                        <li class="ba-menu__item active"><a href="#ba-what" class="ba-menu__link" title="About Us">About Us</a></li>
+                        <li class="ba-menu__item"><a href="#ba-gallery" class="ba-menu__link" title="Projects">projects</a></li>
+                        <li class="ba-menu__item"><a href="#ba-news" class="ba-menu__link" title="News">news</a></li>
+                        <li class="ba-menu__item"><a href="#ba-forma" class="ba-menu__link" title="Contact">contact</a></li>
+                    </ul>
+                </nav>
+                <div class="ba-social">
+                    <a href=""><svg 
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="40px" height="40px">
+                   <image  x="0px" y="0px" width="40px" height="40px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAQAAAAm93DmAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfjDB0PKzRnH+8uAAACZUlEQVRIx62XQU7bQBSGP4+MiRKkNAiXKtnFtCDYQboorNLAKVhwjF6BK7RXCS0roAtg1wUhyQosgRE0UhMFg3hdOIZQOs4k5J+VNW++mfdsz/xjCVpZuORxyZLBBu5p0yLAJ0A7zNL0ZFhijhCfC37zhztggimyvCOPQ51ftE2BKUp41DjhWrOMaeb5QINDuoOBRdZocPwy9MW0y3js00gCKlYp8IMAM7l85px9Hv4PtFnH4juhIQ7AoYKww/1LoGKDe3b7ZzOSooxNNR6nHjvWYAQcPLDbG/0M6FEYCRcjC8z1A1OssjNU7Z4rZIdVUk/AEk2uRsYBXFHnYwycwuPoVTiAY4pMRcBFavrP2Oo1VvhKlSpfNIFdaiwCYsmmTAu6FklW5FoiVbWxOdkUS+ESav/ZJ22TGxhzwy2uTZ4zgwqtA1CyjiBhwzsnr3C5NK27NejVXeIqstyYAg2SzirSdJJiZF1EelmKiMh2QnCHtMLhbqhVNBP6QhybxCoDNzSB4iOsmRiNTYiTtDtbR3gQJW15JM/vECo6pIdKOUlpOoqWwSdrqje0FAFvxwacJVD4FMYGLOArAibHlHSOSQIb4ZQFDgYEfzMALnAabTsZ2ZKUfgMzbCnZkoyggDYNll+d8DIN2vGZcojHzKtwM3gcQgzssk8FZ2ScQ4WD6H+Lz+UGPuW+Y38YKcr41OOHWHswElJR7o0G/jVLGzA+sxTNtkZ+SDvns6ezc5E8PtE0NJxFfsa10wNjS3xCTXu85phn3tQSR8qwxHtuOeeC1jPTPkuBSU6HMe2PfX3XigngzuRa8RfA+xCxuVRqdAAAAABJRU5ErkJggg==" />
+                   </svg></a>
+                    <a href=""><svg 
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="41px" height="40px">
+                   <image  x="0px" y="0px" width="41px" height="40px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAAoCAQAAADJNRvYAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfjDB0PNBp2k+x/AAACuElEQVRIx62X3U4TURDHf7tsq6IUCrSxFA0BAwa4MKwXVG4wqb6ARqNwja/QR8BHgFfgESBBCQnEWGKCF3zVmBhAy8dSCkRoYbxYln64uy1d5tz0zDnz25nT2d3/KoKL+WijjSCN+LlFjhxZDP6wyZFzkOKIjNDLA3bYYpcMp5ziw0eAIBGiHLLKGhfVI8MMcofvbHBqezmVdvpoJskqUhlZR4wOvrCO65kAIZ4Bn8i4IwO85IA5zqjO+hlgjp8lPikeLTIi/cK1RkhGpLfYU7wYkFHpvCbQjHsvPXZIv7yVxzUArWSi1ky9OoFhfrFS5QmW2yGzDFNvtYNpXQRYrBEIsMk6sWKkxiDz9o1btS0RJlJA9rLDb09AyJNELyD7+OYRCLBBgBYTGSFH+gaQF6zRbSI7SNnvUcoGcSaYQFcgrtgFpOgABHklYYd+02VagtZ+GRPL9mVcgrYRo9KgUkcTuw6l6MSZFv1yNn7lD6Irhm1EmpBGI1nH9kkCOl9lhikMrvLFUF44RBzQqFHPscuRm40RJ17iNRz3H9GsopFzQeq23qTj/hyaiospST7aLsy4Rank8bmsT9kUaSiTjvt95FVOuOua5/8ZfXBJ4R7HKhkacClfeUOixJFQplyQTWQ0zjmg1f6GlDE60Yv+bYOES9EAYRZUYIuoQ4aT/MBsGYMkCboqAIOck0WQiLyu8QVRPp5KzHxRbOMjjHdT6WbNel4u8+QGkI84ZM9CrhDivkeghm7eVSYyzyJDqJ6QA6TZLiAhRZZBD8Ao3SyYPwuZfeYhPTUCAzxnlpPL2Y0ImHfFOsW7zGotl1l2YnCfeS9i0ItkbWUIhdlKktW0MDFus0yqgrBeYqUaYW1ZhD7aSbPFHhn+coaG/1L+t5NhlXXO7QIV1+r8RGgjSBN+/OTJkWW/0kfKPwiW05ixsNtNAAAAAElFTkSuQmCC" />
+                   </svg></a>
+                    <a href=""><svg 
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="41px" height="40px">
+                   <image  x="0px" y="0px" width="41px" height="40px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAAoCAQAAADJNRvYAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfjDB0PMB2Mm7zYAAAC6UlEQVRIx62XzU4TURTHfzO04BetpXwESYwpQgniQmoMGD8wfi1cajGoOxNfAR9BHkFeQANvYEmIC7QLIS6UkGiJiUgRDAMooi3wd9GWTnGmLZT/3XTuPefXufeec+8ZQxTRMVpoIkAtXrz8JcUqFvPMk3Z3MlyQJu2E8fGNBZZZI02aGmrwU88JGvjKNMnykQZhIizzkTm2Hb1qOE0XG8RZLAfppw94wxLFZdDGBb7wlq3iyFNcYYoPlKdqLhPgFWsFvbK3Tj1Ug9hT69JDBe099sF2PZBvj0CEQnpk98sPtBQO7Kl16L5qck9mdv5H6GN815qUrxm+cjUffxn18Jlv+wQCxKml1Y5sponJCoCwzQQ9ePLIbqbYrAgJCyzRmUMG8fOpQiDAe84AeIA2PjknngEoQoTATpfFrDEG4JDIi6RpJonQgOqcgwP0TP8roRDOwXROvQLV6pFrvEUlDSr/jiigqJaVcEE26q5AId1yRcYUK5ybRhRTVNINR3tTj1Vl4mfFdcEjmdBSVAlJCT1hFosxIOQSSmv4TY7yyxUZwAJFGWGIOoZ5zqzRb1hg27BCrXPYxFvs0AdgkFFj2LCMIUYZLGG7idektCLMZn8Nu0y4QCZpvCVsJolmdz20A3eTh7SHdY6VMHtKjHcaJUSU/hK2R9kwWeW4q4FFAIwxbmIxSIh+YxQUACyXOftY9bDExSJTjgAYY5y39d4AlwWoZ4WtTEIGDih7sgmJenX+gHL8npqFIQhym5dOZ9EeT6JGrvOC7L/dUfs+LzJ7u6Wu/HU2RSRzyFegJhqYyWw7QJJFuisCmlwinrlscgn5lnZaKkD28JNEjp7Rb8a5hm+fwDAneb3zZFvesAYOtoBBB1RmVVoMXqJudzHoVLJeQ0zwowQuV7LGdxcVzoV1B90lCutWzvKHON8d3F3K/yraCONnjiQWa6TYpJpD+AlygkbmmGbe5fXL+kjx4cVDihQrWMyTJOXu9A9ENYth/F3YgAAAAABJRU5ErkJggg==" />
+                   </svg></a>
+                </div>
+            </div>
+        </div>
+        <div class="ba-slider">
+            <div class="ba-slider-1 ba-slide">
+                <h1>Simple & mordern</h1>
+                <p>We make the world's beautiful every day</p>
+            </div>
+
+            <div class="ba-slider-2 ba-slide">
+                <h2>Simple & mordern</h2>
+                <p>We make the world's beautiful every day</p>
+            </div>
+            <div class="ba-slider-3 ba-slide">
+                <h2>Simple & mordern</h2>
+                <p>We make the world's beautiful every day</p>
+            </div>
+            <div class="ba-slider-4 ba-slide">
+                <h2>Simple & mordern</h2>
+                <p>We make the world's beautiful every day</p>
+            </div>
+        </div>
+        <div class="ba-header-scroll">
+            <a href="#ba-gallery" title="Project">
+                <svg width="42" height="42">
+                <circle r="19" cx="20" cy="20"
+                        fill="transparent" stroke="white" stroke-width="2" />
+                        <polyline points="14,14 20,23 26,14"
+                        fill="none" stroke="white" stroke-width="2" />
+           </svg></a>
         </div>
     </header>
     <main>
-        <section class="ba-section">
+        <section class="ba-what" id='ba-what'>
             <div class="container">
+                <h2>what we do</h2>
+                <div class="ba-what-aticle1">
+                    <div class="ba-what-article1__fon"></div>
+                    <img src="src/trade.jpg" class="ba-what-aticle1__img1" alt="trade">
+                    <div class="ba-wtat-aticle1__text">
+                        <span>One World</span>
+                        <h3>Trade Center</h3>
+                        <p>Increasing prosperity in our lives can be accomplished by havin</p>
+                        <a href="" title="Trade Center details" class="ba-wtat-aticle1__btn">more details</a>
+                        <p class="ba-what-aticle1__adress">
+                            <svg class="ba-what-aticle" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="map-marker-alt" class="svg-inline--fa fa-map-marker-alt fa-w-12" role="img" viewBox="0 0 384 512"><path fill="currentColor" d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"/></svg>                            New York City, United States - 1776 feet</p>
+                    </div>
 
+                </div>
+                <div class="ba-what-aticle2">
+                    <div class="ba-what-article2__fon"></div>
+                    <div class="ba-wtat-aticle2__text">
+                        <span>International </span>
+                        <h3>Commerce Centre</h3>
+                        <p>Successful businesses have many things in common, today we’ll l</p>
+                        <a href="" title="Trade Center details" class="ba-wtat-aticle2__btn">more details</a>
+                        <p class="ba-what-aticle1__adress">
+                            <svg class="ba-what-aticle" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="map-marker-alt" class="svg-inline--fa fa-map-marker-alt fa-w-12" role="img" viewBox="0 0 384 512"><path fill="currentColor" d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"/></svg>                            Hong Kong - 1588 Feet</p>
+                    </div>
+
+                    <img src="src/commerce.jpg" class="ba-what-aticle2__img2" alt="commerce">
+                </div>
             </div>
         </section>
+        <section class="ba-news" id='ba-news'>
+            <div class="container">
+                <h2>latest news</h2>
+                <div class="ba-row ba-slider-news">
+                    <article class="ba-col-4">
+                        <img src="src/new-1.jpg" alt="">
+                        <div class="ba-new-statti">
+                            <h3>See The Unmatched Beauty Of The Great.</h3>
+                            <p>Free directories: directories are perfect for customers that ar</p>
+                            <div class="ba-new-opis">
+                                <img src="src/photo-1.png" alt="Isaac Dunn">
+                                <div>
+                                    <p>Isaac Dunn</p>
+                                    <span>09 Feb 2017</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="ba-col-4">
+                        <img src="src/new-2.jpg" alt="Isaac Dunn">
+                        <div class="ba-new-statti">
+                            <h3>See The Unmatched Beauty Of The Great.</h3>
+                            <p>Free directories: directories are perfect for customers that ar</p>
+                            <div class="ba-new-opis">
+                                <img src="src/photo-2.png" alt="Isaac Dunn">
+                                <div>
+                                    <p>Isaac Dunn</p>
+                                    <span>09 Feb 2017</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="ba-col-4">
+                        <img src="src/new-3.jpg" alt="">
+                        <div class="ba-new-statti">
+                            <h3>See The Unmatched Beauty Of The Great.</h3>
+                            <p>Free directories: directories are perfect for customers that ar</p>
+                            <div class="ba-new-opis">
+                                <img src="src/photo-3.png" alt="Isaac Dunn">
+                                <div>
+                                    <p>Isaac Dunn</p>
+                                    <span>09 Feb 2017</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="ba-col-4">
+                        <img src="src/new-1.jpg" alt="">
+                        <div class="ba-new-statti">
+                            <h3>See The Unmatched Beauty Of The Great.</h3>
+                            <p>Free directories: directories are perfect for customers that ar</p>
+                            <div class="ba-new-opis">
+                                <img src="src/photo-1.png" alt="Isaac Dunn">
+                                <div>
+                                    <p>Isaac Dunn</p>
+                                    <span>09 Feb 2017</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="ba-col-4">
+                        <img src="src/new-2.jpg" alt="">
+                        <div class="ba-new-statti">
+                            <h3>See The Unmatched Beauty Of The Great.</h3>
+                            <p>Free directories: directories are perfect for customers that ar</p>
+                            <div class="ba-new-opis">
+                                <img src="src/photo-2.png" alt="Isaac Dunn">
+                                <div>
+                                    <p>Isaac Dunn</p>
+                                    <span>09 Feb 2017</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="ba-col-4">
+                        <img src="src/new-3.jpg" alt="">
+                        <div class="ba-new-statti">
+                            <h3>See The Unmatched Beauty Of The Great.</h3>
+                            <p>Free directories: directories are perfect for customers that ar</p>
+                            <div class="ba-new-opis">
+                                <img src="src/photo-3.png" alt="Isaac Dunn">
+                                <div>
+                                    <p>Isaac Dunn</p>
+                                    <span>09 Feb 2017</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="ba-gallery" id='ba-gallery'>
+            <div class="container">
+                <h2>gallery</h2>
+                <div class="container ba-gallery-wrapper">
+                    <img src="src/gallery-1.jpg" alt="foto-1">
+                    <div class="ba-gallery-block">
+                        <img src="src/gallery-2.jpg" alt="foto-1">
+                        <img src="src/gallery-4.jpg" alt="foto-1">
+                    </div>
+                    <div class="ba-gallery-block">
+                        <img src="src/gallery-3.jpg" alt="foto-1">
+                        <img src="src/gallery-5.jpg" alt="foto-1">
+                    </div>
+                </div>
+                <p> <a href="" title="Trade Center details" class="ba-gallery__btn">see more</a>
+                </p>
+            </div>
+        </section>
+        <!-- <section class="ba-map">
+            <div id="map"></div> карта не загрузилась (((
+        </section> -->
     </main>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.79513215452!2d36.220071315267106!3d50.01519497941774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTDCsDAwJzU0LjciTiAzNsKwMTMnMjAuMSJF!5e0!3m2!1sru!2sua!4v1577663403334!5m2!1sru!2sua"
+        width="100%" height="650" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
     <footer class="ba-footer">
         <div class="container">
             <div class="ba-row">
-                <div class="ba-col-4">1</div>
-                <div class="ba-col-4">2</div>
-                <div class="ba-col-4">3</div>
+                <div class="ba-col-2"></div>
+                <div class="ba-col-8 ba-footer-position">
+                    <div class="ba-forma" id='ba-forma'>
+                        <h2>get in touch</h2>
+                        <div class="ba-form-wrapper">
+                            <div class="ba-forma__contact">
+                                <p><i class="fa fa-map-marker fa-fw"></i>91 Nolan Extensions Suite 670</p>
+                                <p><i class="fa fa-phone fa-fw"></i>+001 356-868-2454</p>
+                                <p><i class="fa fa-inbox fa-fw"></i>gahuy93@gmail.com</p>
+                                <p><i class="fa fa-clock-o fa-fw"></i>From 07:05AM to 19:30PM</p>
+                            </div>
+                            <div class="ba-forma__input">
+                                <form action="#" id='ba-footer-forma'>
+                                    <input type="text" placeholder="Name">
+                                    <input type="text" placeholder="Email">
+                                    <input type="button" value="SUBMIT">
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="ba-footer-wrapper">
+                        <a href="" class="ba-logo" title="logo"><img src="src/logo.png" alt="Logo"></a>
+                        <div class="ba-social">
+                            <a href=""><svg 
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        width="40px" height="40px">
+                       <image  x="0px" y="0px" width="40px" height="40px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAQAAAAm93DmAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfjDB0PKzRnH+8uAAACZUlEQVRIx62XQU7bQBSGP4+MiRKkNAiXKtnFtCDYQboorNLAKVhwjF6BK7RXCS0roAtg1wUhyQosgRE0UhMFg3hdOIZQOs4k5J+VNW++mfdsz/xjCVpZuORxyZLBBu5p0yLAJ0A7zNL0ZFhijhCfC37zhztggimyvCOPQ51ftE2BKUp41DjhWrOMaeb5QINDuoOBRdZocPwy9MW0y3js00gCKlYp8IMAM7l85px9Hv4PtFnH4juhIQ7AoYKww/1LoGKDe3b7ZzOSooxNNR6nHjvWYAQcPLDbG/0M6FEYCRcjC8z1A1OssjNU7Z4rZIdVUk/AEk2uRsYBXFHnYwycwuPoVTiAY4pMRcBFavrP2Oo1VvhKlSpfNIFdaiwCYsmmTAu6FklW5FoiVbWxOdkUS+ESav/ZJ22TGxhzwy2uTZ4zgwqtA1CyjiBhwzsnr3C5NK27NejVXeIqstyYAg2SzirSdJJiZF1EelmKiMh2QnCHtMLhbqhVNBP6QhybxCoDNzSB4iOsmRiNTYiTtDtbR3gQJW15JM/vECo6pIdKOUlpOoqWwSdrqje0FAFvxwacJVD4FMYGLOArAibHlHSOSQIb4ZQFDgYEfzMALnAabTsZ2ZKUfgMzbCnZkoyggDYNll+d8DIN2vGZcojHzKtwM3gcQgzssk8FZ2ScQ4WD6H+Lz+UGPuW+Y38YKcr41OOHWHswElJR7o0G/jVLGzA+sxTNtkZ+SDvns6ezc5E8PtE0NJxFfsa10wNjS3xCTXu85phn3tQSR8qwxHtuOeeC1jPTPkuBSU6HMe2PfX3XigngzuRa8RfA+xCxuVRqdAAAAABJRU5ErkJggg==" />
+                       </svg></a>
+                            <a href=""><svg 
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        width="41px" height="40px">
+                       <image  x="0px" y="0px" width="41px" height="40px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAAoCAQAAADJNRvYAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfjDB0PNBp2k+x/AAACuElEQVRIx62X3U4TURDHf7tsq6IUCrSxFA0BAwa4MKwXVG4wqb6ARqNwja/QR8BHgFfgESBBCQnEWGKCF3zVmBhAy8dSCkRoYbxYln64uy1d5tz0zDnz25nT2d3/KoKL+WijjSCN+LlFjhxZDP6wyZFzkOKIjNDLA3bYYpcMp5ziw0eAIBGiHLLKGhfVI8MMcofvbHBqezmVdvpoJskqUhlZR4wOvrCO65kAIZ4Bn8i4IwO85IA5zqjO+hlgjp8lPikeLTIi/cK1RkhGpLfYU7wYkFHpvCbQjHsvPXZIv7yVxzUArWSi1ky9OoFhfrFS5QmW2yGzDFNvtYNpXQRYrBEIsMk6sWKkxiDz9o1btS0RJlJA9rLDb09AyJNELyD7+OYRCLBBgBYTGSFH+gaQF6zRbSI7SNnvUcoGcSaYQFcgrtgFpOgABHklYYd+02VagtZ+GRPL9mVcgrYRo9KgUkcTuw6l6MSZFv1yNn7lD6Irhm1EmpBGI1nH9kkCOl9lhikMrvLFUF44RBzQqFHPscuRm40RJ17iNRz3H9GsopFzQeq23qTj/hyaiospST7aLsy4Rank8bmsT9kUaSiTjvt95FVOuOua5/8ZfXBJ4R7HKhkacClfeUOixJFQplyQTWQ0zjmg1f6GlDE60Yv+bYOES9EAYRZUYIuoQ4aT/MBsGYMkCboqAIOck0WQiLyu8QVRPp5KzHxRbOMjjHdT6WbNel4u8+QGkI84ZM9CrhDivkeghm7eVSYyzyJDqJ6QA6TZLiAhRZZBD8Ao3SyYPwuZfeYhPTUCAzxnlpPL2Y0ImHfFOsW7zGotl1l2YnCfeS9i0ItkbWUIhdlKktW0MDFus0yqgrBeYqUaYW1ZhD7aSbPFHhn+coaG/1L+t5NhlXXO7QIV1+r8RGgjSBN+/OTJkWW/0kfKPwiW05ixsNtNAAAAAElFTkSuQmCC" />
+                       </svg></a>
+                            <a href=""><svg 
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        width="41px" height="40px">
+                       <image  x="0px" y="0px" width="41px" height="40px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAAoCAQAAADJNRvYAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfjDB0PMB2Mm7zYAAAC6UlEQVRIx62XzU4TURTHfzO04BetpXwESYwpQgniQmoMGD8wfi1cajGoOxNfAR9BHkFeQANvYEmIC7QLIS6UkGiJiUgRDAMooi3wd9GWTnGmLZT/3XTuPefXufeec+8ZQxTRMVpoIkAtXrz8JcUqFvPMk3Z3MlyQJu2E8fGNBZZZI02aGmrwU88JGvjKNMnykQZhIizzkTm2Hb1qOE0XG8RZLAfppw94wxLFZdDGBb7wlq3iyFNcYYoPlKdqLhPgFWsFvbK3Tj1Ug9hT69JDBe099sF2PZBvj0CEQnpk98sPtBQO7Kl16L5qck9mdv5H6GN815qUrxm+cjUffxn18Jlv+wQCxKml1Y5sponJCoCwzQQ9ePLIbqbYrAgJCyzRmUMG8fOpQiDAe84AeIA2PjknngEoQoTATpfFrDEG4JDIi6RpJonQgOqcgwP0TP8roRDOwXROvQLV6pFrvEUlDSr/jiigqJaVcEE26q5AId1yRcYUK5ybRhRTVNINR3tTj1Vl4mfFdcEjmdBSVAlJCT1hFosxIOQSSmv4TY7yyxUZwAJFGWGIOoZ5zqzRb1hg27BCrXPYxFvs0AdgkFFj2LCMIUYZLGG7idektCLMZn8Nu0y4QCZpvCVsJolmdz20A3eTh7SHdY6VMHtKjHcaJUSU/hK2R9kwWeW4q4FFAIwxbmIxSIh+YxQUACyXOftY9bDExSJTjgAYY5y39d4AlwWoZ4WtTEIGDih7sgmJenX+gHL8npqFIQhym5dOZ9EeT6JGrvOC7L/dUfs+LzJ7u6Wu/HU2RSRzyFegJhqYyWw7QJJFuisCmlwinrlscgn5lnZaKkD28JNEjp7Rb8a5hm+fwDAneb3zZFvesAYOtoBBB1RmVVoMXqJudzHoVLJeQ0zwowQuV7LGdxcVzoV1B90lCutWzvKHON8d3F3K/yraCONnjiQWa6TYpJpD+AlygkbmmGbe5fXL+kjx4cVDihQrWMyTJOXu9A9ENYth/F3YgAAAAABJRU5ErkJggg==" />
+                       </svg></a>
+                        </div>
+                    </div>
+                    <span>Copyrights © 2020 Monticello Group</span>
+                    <span>Made with <i class="fa fa-heart fa-fw"></i> by Ga Huy</span>
+                </div>
             </div>
+            <div class="ba-col-2"></div>
         </div>
+
     </footer>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
+    <script src="js/app.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOFADmh5XKTWnRWE4PgDr1PgqxPNZy92M&callback=initMap" async defer></script>
+
 </body>
 
 </html>

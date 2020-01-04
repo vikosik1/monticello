@@ -1,0 +1,5 @@
+@font-face {
+    font-family: 'fa-regular-400';
+    src: url('./fa-regular-400.eot');
+    src: local('fa-regular-400'), url('./fa-regular-400.woff') format('woff'), url('./fa-regular-400.ttf') format('truetype');
+}
